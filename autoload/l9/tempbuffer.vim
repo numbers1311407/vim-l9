@@ -43,7 +43,7 @@ endfunction
 " a:listener:
 "   a:listener.onClose(written)
 function l9#tempbuffer#openScratch(bufname, filetype, lines, topleft, vertical, height, listener)
-  let openCmdPrefix = (a:topleft ? 'topleft ' : '')
+  let openCmdPrefix = (a:topleft ? 'botright ' : '')
         \           . (a:vertical ? 'vertical ' : '')
         \           . (a:height > 0 ? a:height : '')
   if !exists('s:dataMap[a:bufname]') || !bufexists(s:dataMap[a:bufname].bufNr)
